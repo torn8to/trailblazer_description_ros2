@@ -14,7 +14,7 @@
 
   <!-- Load calibration -->
   <xacro:include filename="$(find trailblazer_description)/urdf/tools/calibration.urdf.xacro" />
-  <xacro:property name="calibration" value="${load_yaml('$(find trailblazer_description)/config/calibration.yaml')}" />
+  <xacro:property name="calibration" value="${xacro.load_yaml('$(find trailblazer_description)/config/calibration.yaml')}" />
 
   <!-- Add sensors: IMU -->
   <link name="xsens_imu_link"/>
@@ -23,6 +23,7 @@
     <parent link="base_link" />
     <child link="xsens_imu_link" />
   </joint>
+
 
   <!-- Add sensors: Bpearl -->
   <xacro:include filename="$(find trailblazer_description)/urdf/sensors/bpearl.urdf.xacro"/>

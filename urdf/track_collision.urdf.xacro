@@ -40,7 +40,7 @@
       <origin xyz="${xyz}" rpy="${rpy}" />
     </joint>
 
-    <gazebo reference="{name}_link">
+    <gazebo reference="${name}_link">
       <selfCollide>false</selfCollide>
       <static>false</static>
       <turnGravityOff>false</turnGravityOff>

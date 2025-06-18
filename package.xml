@@ -1,17 +1,25 @@
 <?xml version="1.0"?>
-<package format="2">
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
   <name>trailblazer_description</name>
   <version>0.1.0</version>
   <description>URDF files for Trailblazer.</description>
   <maintainer email="julien.kindle@hilti.com">Julien Kindle</maintainer>
   <license>Apache-2.0</license>
 
-  <depend>roslaunch</depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
   <depend>xacro</depend>
   <depend>urdf</depend>
   <depend>tf2</depend>
-  <depend>python-numpy</depend>
-  <depend>python-yaml</depend>
-  <depend>python-argparse</depend>
-  <depend>python-rospkg</depend>
+  <depend>tf2_ros</depend>
+  <depend>rclcpp</depend>
+  
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 </package>
